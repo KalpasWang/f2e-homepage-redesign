@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('./assets/MonumentExtended-Regular.otf') format('opentype');
+}
