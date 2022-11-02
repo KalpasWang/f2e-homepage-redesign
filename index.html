@@ -14,26 +14,48 @@
   </head>
   <body>
     <div id="app">
-      <header class="px-4 position-fixed bg-neutral-5">
-        <nav class="container-xl mx-auto">
-          <button type="button" title="menu" class="lg:hidden" nav-bar-trigger>
-            <span class="navbar-trigger-icon">
-              <span bar1 class="navbar-trigger-bar mt-1"
-                ><span class="hidden origin-[10%_10%] rotate-45"></span
-              ></span>
-              <span bar2 class="bar2 navbar-trigger-bar mt-2"></span>
-              <span bar3 class="bar3 navbar-trigger-bar mt-2"
-                ><span
-                  class="mt-mt-[0.4375rem] hidden origin-[10%_90%] -rotate-45"
-                ></span
-              ></span>
-            </span>
+      <header class="fixed md:relative w-full bg-neutral-5 text-neutral-1">
+        <nav
+          class="container p-4 md:px-8 md:py-6 mx-auto flex justify-start items-center gap-6"
+        >
+          <button
+            id="menu-button"
+            type="button"
+            title="選單按鈕"
+            class="md:hidden"
+          >
+            <img src="./assets/menu-btn.svg" alt="menu-button" />
           </button>
-          <a href="#" title="logo"></a>
-          <ul>
-            <li></li>
-          </ul>
-          <button type="button" title="register"></button>
+          <a href="#" title="回首頁">
+            <img src="./assets/f2e-logo.svg" alt="logo" />
+          </a>
+          <div
+            id="menu-content"
+            class="absolute left-0 bottom-0 translate-y-full w-full p-4 pb-8 md:static md:w-auto md:ml-auto md:translate-y-0 md:p-0 bg-neutral-5 max-h-0 md:max-h-full"
+          >
+            <div class="text-right mb-4 md:hidden">
+              <button id="close-button" type="button" title="關閉選單"
+                ><img src="./assets/close.svg" alt="close"
+              /></button>
+            </div>
+            <ul
+              class="flex flex-col justify-center items-center gap-8 md:flex-row"
+            >
+              <li><a href="#" class="text-neutral-2">關卡資訊</a></li>
+              <li><a href="#" class="text-neutral-2">攻略資源</a></li>
+              <li><a href="#" class="text-neutral-2">求職專區</a></li>
+            </ul>
+            <a
+              href="#"
+              class="pt-2 px-6 pb-2.5 mt-8 rounded-full block text-center border border-neutral-1 text-neutral-1 md:hidden"
+              >登入</a
+            >
+          </div>
+          <button
+            type="button"
+            class="pt-2 px-4 pb-2.5 ml-auto md:ml-6 leading-5 rounded-full border border-neutral-1"
+            >立即報名</button
+          >
         </nav>
       </header>
     </div>
