@@ -14,9 +14,9 @@
   </head>
   <body>
     <div id="app">
-      <header class="fixed md:relative w-full bg-neutral-5 text-neutral-1">
+      <header class="fixed w-full bg-neutral-5 text-neutral-1 md:relative">
         <nav
-          class="container p-4 md:px-8 md:py-6 mx-auto flex justify-start items-center gap-6"
+          class="container mx-auto flex items-center justify-start gap-6 p-4 md:px-8 md:py-6"
         >
           <button
             id="menu-button"
@@ -31,15 +31,15 @@
           </a>
           <div
             id="menu-content"
-            class="absolute left-0 bottom-0 translate-y-full w-full p-4 pb-8 md:static md:w-auto md:ml-auto md:translate-y-0 md:p-0 bg-neutral-5 max-h-0 md:max-h-full"
+            class="absolute left-0 bottom-0 w-full origin-top translate-y-full scale-y-0 bg-neutral-5 p-4 pb-8 transition-transform duration-300 md:static md:ml-auto md:w-auto md:translate-y-0 md:scale-y-100 md:p-0"
           >
-            <div class="text-right mb-4 md:hidden">
-              <button id="close-button" type="button" title="關閉選單"
-                ><img src="./assets/close.svg" alt="close"
-              /></button>
+            <div class="mb-4 text-right md:hidden">
+              <button id="close-button" type="button" title="關閉選單">
+                <img src="./assets/close.svg" alt="close" />
+              </button>
             </div>
             <ul
-              class="flex flex-col justify-center items-center gap-8 md:flex-row"
+              class="flex flex-col items-center justify-center gap-8 md:flex-row"
             >
               <li><a href="#" class="text-neutral-2">關卡資訊</a></li>
               <li><a href="#" class="text-neutral-2">攻略資源</a></li>
@@ -47,15 +47,16 @@
             </ul>
             <a
               href="#"
-              class="pt-2 px-6 pb-2.5 mt-8 rounded-full block text-center border border-neutral-1 text-neutral-1 md:hidden"
+              class="mt-8 block rounded-full border border-neutral-1 px-6 pt-2 pb-2.5 text-center text-neutral-1 md:hidden"
               >登入</a
             >
           </div>
           <button
             type="button"
-            class="pt-2 px-4 pb-2.5 ml-auto md:ml-6 leading-5 rounded-full border border-neutral-1"
-            >立即報名</button
+            class="ml-auto rounded-full border border-neutral-1 px-4 pt-2 pb-2.5 leading-5 md:ml-6"
           >
+            立即報名
+          </button>
         </nav>
       </header>
     </div>
