@@ -105,6 +105,9 @@ module.exports = {
         16.6: "16.6deg",
         20: "20deg",
       },
+      gap: {
+        7.5: "1.875rem", // 30px
+      },
     },
   },
   plugins: [],

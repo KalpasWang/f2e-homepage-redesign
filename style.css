@@ -21,4 +21,17 @@
   .text-shadow {
     text-shadow: 3px 3px 0 theme(colors.primary-1);
   }
+
+  .marquee {
+    animation: marquee 5s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(23.0625rem);
+    }
+  }
 }
