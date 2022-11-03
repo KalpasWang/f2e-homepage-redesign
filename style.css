@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Monument Extended';
-  src: url('./assets/MonumentExtended-Regular.otf') format('opentype');
+@layer utilities {
+  @font-face {
+    font-family: "Monument Extended";
+    src: url("./assets/MonumentExtended-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Pilot Command Italic";
+    src: url("./assets/pilotcommand1_2ital.eot?") format("eot"),
+      url("./assets/pilotcommand1_2ital.woff") format("woff"),
+      url("./assets/pilotcommand1_2ital.ttf") format("truetype"),
+      url("./assets/pilotcommand1_2ital.svg#PilotCommandItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .text-shadow {
+    text-shadow: 3px 3px 0 theme(colors.primary-1);
+  }
 }

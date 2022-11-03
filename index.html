@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="app">
-      <header class="fixed w-full bg-neutral-5 text-neutral-1 md:relative">
+      <header class="fixed z-10 w-full bg-neutral-5 text-neutral-1 md:relative">
         <nav
           class="container mx-auto flex items-center justify-start gap-6 p-4 md:px-8 md:py-6"
         >
@@ -59,6 +59,40 @@
           </button>
         </nav>
       </header>
+      <main>
+        <section
+          id="hero"
+          class="flex min-h-screen items-center justify-center bg-neutral-5 text-neutral-1"
+        >
+          <div class="relative text-center">
+            <h1>
+              <span
+                class="text-shadow block font-pilot text-2xl uppercase tracking-20"
+                >4th</span
+              ><span
+                class="text-shadow block whitespace-nowrap font-monument text-3xl tracking-20"
+                >THE F2E</span
+              >
+            </h1>
+            <h2 class="mb-11 text-lg tracking-80">互動式網頁設計</h2>
+            <a
+              href="#"
+              class="rounded-full bg-yellow-1 px-10 py-3 text-lg font-bold tracking-wide text-neutral-5 hover:bg-yellow-2"
+              >立即報名</a
+            >
+            <img
+              src="./assets/piece1.png"
+              alt="背景圖片1"
+              class="absolute -left-3 -top-16 -rotate-20"
+            />
+            <img
+              src="./assets/piece2.png"
+              alt="背景圖片2"
+              class="absolute -right-9 -bottom-36 rotate-16.6"
+            />
+          </div>
+        </section>
+      </main>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
