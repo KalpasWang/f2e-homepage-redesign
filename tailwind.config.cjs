@@ -61,6 +61,12 @@ module.exports = {
           lineHeight: "2.25rem",
         },
       ],
+      xxl: [
+        "1.75rem", // 28px
+        {
+          lineHeight: "2.5625rem",
+        },
+      ],
       "2xl": [
         "2rem", // 32px
         {
@@ -77,6 +83,18 @@ module.exports = {
         "3rem", // 48px
         {
           lineHeight: "4.5rem",
+        },
+      ],
+      "3.5xl": [
+        "3.25rem", // 52px
+        {
+          lineHeight: "3.5rem",
+        },
+      ],
+      "4xl": [
+        "4.875rem", // 78px
+        {
+          lineHeight: "6rem",
         },
       ],
     },
@@ -96,6 +114,9 @@ module.exports = {
       },
       height: {
         "2px": "2px",
+      },
+      minHeight: {
+        40: "40rem",
       },
       letterSpacing: {
         20: "0.2rem",

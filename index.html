@@ -14,15 +14,15 @@
   </head>
   <body>
     <div id="app">
-      <header class="fixed z-20 w-full bg-neutral-5 text-neutral-1 md:relative">
+      <header class="fixed z-20 w-full bg-neutral-5 text-neutral-1 lg:relative">
         <nav
-          class="container mx-auto flex items-center justify-start gap-6 p-4 md:px-8 md:py-6"
+          class="container mx-auto flex items-center justify-start gap-6 p-4 lg:px-8 lg:py-6"
         >
           <button
             id="menu-button"
             type="button"
             title="選單按鈕"
-            class="md:hidden"
+            class="lg:hidden"
           >
             <img src="./assets/menu-btn.svg" alt="menu-button" />
           </button>
@@ -31,29 +31,31 @@
           </a>
           <div
             id="menu-content"
-            class="absolute left-0 bottom-0 w-full origin-top translate-y-full scale-y-0 bg-neutral-5 p-4 pb-8 transition-transform duration-300 md:static md:ml-auto md:w-auto md:translate-y-0 md:scale-y-100 md:p-0"
+            class="absolute left-0 bottom-0 w-full origin-top translate-y-full scale-y-0 bg-neutral-5 p-4 pb-8 transition-transform duration-300 lg:static lg:ml-auto lg:w-auto lg:translate-y-0 lg:scale-y-100 lg:p-0"
           >
-            <div class="mb-4 text-right md:hidden">
+            <div class="mb-4 text-right lg:hidden">
               <button id="close-button" type="button" title="關閉選單">
                 <img src="./assets/close.svg" alt="close" />
               </button>
             </div>
             <ul
-              class="flex flex-col items-center justify-center gap-8 md:flex-row"
+              class="group flex flex-col items-center justify-center gap-8 lg:flex-row"
             >
-              <li><a href="#" class="text-neutral-2">關卡資訊</a></li>
+              <li class="group-hover:">
+                <a href="#" class="text-neutral-2">關卡資訊</a>
+              </li>
               <li><a href="#" class="text-neutral-2">攻略資源</a></li>
               <li><a href="#" class="text-neutral-2">求職專區</a></li>
             </ul>
             <a
               href="#"
-              class="mt-8 block rounded-full border border-neutral-1 px-6 pt-2 pb-2.5 text-center text-neutral-1 md:hidden"
+              class="mt-8 block rounded-full border border-neutral-1 px-6 pt-2 pb-2.5 text-center text-neutral-1 lg:hidden"
               >登入</a
             >
           </div>
           <button
             type="button"
-            class="ml-auto rounded-full border border-neutral-1 px-4 pt-2 pb-2.5 leading-5 md:ml-6"
+            class="ml-auto rounded-full border border-neutral-1 px-4 pt-2 pb-2.5 leading-5 transition-all hover:border-green-1 hover:text-green-1 hover:shadow hover:shadow-green-1 lg:ml-6"
           >
             立即報名
           </button>
@@ -62,33 +64,47 @@
       <main>
         <section
           id="hero"
-          class="relative flex min-h-screen items-center justify-center bg-neutral-5 pb-8 text-neutral-1"
+          class="relative flex h-screen items-center justify-center bg-neutral-5 py-40 text-neutral-1 lg:h-auto lg:pt-28"
         >
-          <div class="relative z-10 mb-10 text-center">
+          <div class="relative z-10 text-center">
             <h1>
               <span
-                class="text-shadow block font-pilot text-2xl uppercase tracking-20"
+                class="text-shadow block font-pilot text-2xl uppercase tracking-20 lg:relative lg:left-[45%] lg:text-3.5xl"
                 >4th</span
               ><span
-                class="text-shadow block whitespace-nowrap font-monument text-3xl tracking-20"
+                class="text-shadow block whitespace-nowrap font-monument text-3xl tracking-20 lg:text-4xl"
                 >THE F2E</span
               >
             </h1>
-            <h2 class="mb-11 text-lg tracking-80">互動式網頁設計</h2>
-            <a
-              href="#"
-              class="rounded-full bg-yellow-1 px-10 py-3 text-lg font-bold tracking-wide text-neutral-5 hover:bg-yellow-2"
-              >立即報名</a
-            >
+            <h2 class="text-lg font-bold tracking-80 lg:text-xxl">
+              互動式網頁設計
+            </h2>
+            <div class="mt-11 text-center">
+              <a
+                href="#"
+                class="inline-block rounded-full bg-yellow-1 px-10 py-3 text-lg font-bold tracking-wide text-neutral-5 transition-all hover:bg-yellow-2 hover:shadow hover:shadow-yellow-2"
+                >立即報名</a
+              >
+            </div>
             <img
               src="./assets/piece1.png"
               alt="背景圖片1"
-              class="absolute -left-3 -top-16 -rotate-20"
+              class="absolute -left-3 -top-16 -rotate-20 lg:-left-64 lg:top-3 lg:w-[150px]"
             />
             <img
               src="./assets/piece2.png"
               alt="背景圖片2"
-              class="absolute -right-6 -bottom-36 rotate-16.6"
+              class="absolute right-3 -bottom-36 rotate-16.6 sm:-right-6 lg:-right-[35%] lg:top-[45%] lg:w-[250px]"
+            />
+            <img
+              src="./assets/illustration01.svg"
+              alt="背景圖片3"
+              class="absolute hidden lg:-right-[60%] lg:top-2 lg:block"
+            />
+            <img
+              src="./assets/illustration02.svg"
+              alt="背景圖片4"
+              class="absolute hidden lg:-left-32 lg:bottom-0 lg:block"
             />
           </div>
           <div class="absolute bottom-8 right-0 w-full overflow-hidden">
@@ -106,6 +122,7 @@
             </div>
           </div>
         </section>
+        <section id="intro"></section>
       </main>
     </div>
     <script type="module" src="/main.js"></script>

@@ -23,7 +23,7 @@
   }
 
   .marquee {
-    animation: marquee 5s linear infinite;
+    animation: marquee 2s linear infinite;
   }
 
   @keyframes marquee {
@@ -31,7 +31,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(23.0625rem);
+      transform: translateX(369px);
     }
   }
 }
