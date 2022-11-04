@@ -30,6 +30,9 @@ module.exports = {
     boxShadow: {
       DEFAULT: "0 0 10px 0 rgb(0 0 0 / 0.6)",
     },
+    container: {
+      center: true,
+    },
     fontSize: {
       xs: [
         "0.75rem", // 12px
