@@ -22,6 +22,10 @@
     text-shadow: 3px 3px 0 theme(colors.primary-1);
   }
 
+  .transition-30 {
+    @apply transition-all duration-300;
+  }
+
   .marquee {
     animation: marquee 2s linear infinite;
   }
