@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .opening-title {
+    font-size: clamp(4rem, 18vw, 8rem);
+    position: relative;
+  }
+}
+
 @layer utilities {
   @font-face {
     font-family: "Monument Extended";
