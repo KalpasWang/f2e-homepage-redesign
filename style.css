@@ -4,8 +4,14 @@
 
 @layer components {
   .opening-title {
-    font-size: clamp(4rem, 18vw, 8rem);
+    font-size: clamp(4rem, 10vw, 8rem);
     position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .opening-title {
+      font-size: clamp(4rem, 15vw, 8rem);
+    }
   }
 }
 

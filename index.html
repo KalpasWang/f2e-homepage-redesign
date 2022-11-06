@@ -523,46 +523,106 @@
         </section>
         <section
           id="opening"
-          class="relative min-h-screen overflow-hidden bg-neutral-1 py-9 lg:min-h-max lg:pt-40 lg:pb-52"
+          class="relative flex min-h-screen items-center justify-center overflow-hidden bg-neutral-1 lg:min-h-max lg:pt-40 lg:pb-52"
         >
           <div
-            class="flex flex-col items-center justify-center gap-1 lg:flex-row lg:gap-3"
+            aria-label="頂部跑馬燈"
+            class="absolute inset-x-0 top-0 overflow-hidden bg-gradient-to-r from-gradient-b1 to-gradient-b2"
           >
-            <img src="./assets/opening/hand1.png" alt="手1" />
-            <div class="relative">
-              <div class="absolute -inset-6">
-                <img
-                  class="h-full w-full"
-                  src="./assets/opening/background.svg"
-                  alt="背景圖片"
-                />
-              </div>
-              <h2
-                class="opening-title text-center font-bold leading-snug text-neutral-5"
+            <div class="flex flex-nowrap items-center justify-end gap-10">
+              <span
+                class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
+                >interactive web design</span
               >
-                互動式<br />網頁設計
-              </h2>
-              <p
-                class="absolute inset-x-8 -bottom-20 hidden items-center justify-between lg:flex"
+              <span class="rounded-full bg-neutral-1 p-2"></span>
+              <span
+                class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
+                >interactive web design</span
               >
-                <span class="text-xl font-bold text-neutral-5">前端工程師</span>
-                <img src="./assets/close.svg" alt="X" class="fill-neutral-5" />
-                <span class="text-xl font-bold text-neutral-5">UI設計師</span>
-              </p>
+              <span class="rounded-full bg-neutral-1 p-2"></span>
+              <span
+                class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
+                >interactive web design</span
+              >
+              <span class="rounded-full bg-neutral-1 p-2"></span>
             </div>
-            <img src="./assets/opening/hand2.png" alt="手2" />
           </div>
-          <img
-            class="absolute right-0 top-6"
-            src="./assets/opening/stamp 1.svg"
-            alt="圖騰1"
-          />
-          <img
-            class="absolute left-0 -bottom-6"
-            src="./assets/opening/stamp 2.svg"
-            alt="圖騰2"
-          />
+          <div aria-label="banner" class="relative mx-auto w-fit">
+            <img
+              class="absolute -right-12 top-14 w-44 lg:right-32 lg:-top-28 lg:w-auto"
+              src="./assets/opening/stamp1.svg"
+              alt="圖騰1"
+            />
+            <img
+              class="absolute -left-36 -bottom-36 w-96 lg:-left-20 lg:-bottom-64 lg:w-auto"
+              src="./assets/opening/stamp2.svg"
+              alt="圖騰2"
+            />
+            <div
+              aria-label="main wrapper"
+              class="flex flex-col-reverse items-center justify-center gap-1 lg:flex-row lg:gap-3"
+            >
+              <img
+                src="./assets/opening/hand1.png"
+                class="w-48 -rotate-120 lg:w-auto lg:rotate-0"
+                alt="手1"
+              />
+              <div aria-label="標題 wrapper" class="relative">
+                <div class="absolute -inset-6">
+                  <img
+                    class="h-full w-full"
+                    src="./assets/opening/background.svg"
+                    alt="背景圖片"
+                  />
+                </div>
+                <h2
+                  aria-label="大標題"
+                  class="opening-title text-center font-bold leading-snug text-neutral-5"
+                >
+                  互動式<br />網頁設計
+                </h2>
+                <p
+                  aria-label="次要標題"
+                  class="absolute inset-x-8 -bottom-20 hidden items-center justify-between lg:flex"
+                >
+                  <span class="text-xl font-bold text-neutral-5"
+                    >前端工程師</span
+                  >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class=""
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 6L6 18"
+                      stroke="black"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 6L18 18"
+                      stroke="black"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-xl font-bold text-neutral-5">UI設計師</span>
+                </p>
+              </div>
+              <img
+                src="./assets/opening/hand2.png"
+                class="w-48 -rotate-45 lg:w-auto lg:rotate-0"
+                alt="手2"
+              />
+            </div>
+          </div>
           <div
+            aria-label="底部跑馬燈"
             class="absolute inset-x-0 bottom-0 overflow-hidden bg-gradient-to-r from-gradient-b1 to-gradient-b2"
           >
             <div class="flex flex-nowrap items-center justify-end gap-10">
@@ -570,17 +630,17 @@
                 class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
                 >interactive web design</span
               >
-              <span class="h-4 w-4 rounded-full bg-neutral-1"></span>
+              <span class="rounded-full bg-neutral-1 p-2"></span>
               <span
                 class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
                 >interactive web design</span
               >
-              <span class="h-4 w-4 rounded-full bg-neutral-1"></span>
+              <span class="rounded-full bg-neutral-1 p-2"></span>
               <span
                 class="whitespace-nowrap font-monument text-lg uppercase tracking-widest text-neutral-1 md:text-2xl"
                 >interactive web design</span
               >
-              <span class="h-4 w-4 rounded-full bg-neutral-1"></span>
+              <span class="rounded-full bg-neutral-1 p-2"></span>
             </div>
           </div>
         </section>

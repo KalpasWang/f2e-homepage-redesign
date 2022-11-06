@@ -128,6 +128,8 @@ module.exports = {
       rotate: {
         16.6: "16.6deg",
         20: "20deg",
+        55: "55deg",
+        120: "120deg",
       },
       gap: {
         7.5: "1.875rem", // 30px
