@@ -39,6 +39,18 @@
     @apply transition-all duration-300;
   }
 
+  .transition-transform-70 {
+    @apply transition-transform duration-700;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
   .marquee {
     animation: marquee 2s linear infinite;
   }

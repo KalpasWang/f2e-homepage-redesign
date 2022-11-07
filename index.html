@@ -644,9 +644,9 @@
             </div>
           </div>
         </section>
-        <section id="three-stages" class="bg-neutral-4 py-20">
+        <section e-name="三大關卡" id="three-stages" class="bg-neutral-4 py-20">
           <div
-            class="relative mx-auto w-fit rounded-full border-4 border-green-1 px-10 pt-5 pb-6 shadow shadow-green-1"
+            class="relative mx-auto w-fit rounded-full border-4 border-green-1 px-10 pt-5 pb-6 shadow shadow-green-1 mb-10"
           >
             <h2
               class="relative text-2xl font-bold text-green-1 flex flex-col lg:flex-row lg:gap-3"
@@ -660,15 +660,61 @@
               alt="thunder"
             />
           </div>
-          <h3></h3>
-          <div
-            class="flex flex-col items-center justify-between gap-4 lg:flex-row"
+          <h3
+            class="text-neutral-1 text-lg mb-20 grid grid-cols-1 grid-rows-3 place-items-center tracking-wider w-fit mx-auto lg:grid-cols-2 lg:grid-rows-2 lg:text-xl"
           >
-            <div e-name="關卡卡片1" class="">
-              <div class="face front"></div>
-              <div class="face back"></div>
-            </div>
-          </div>
+            <span class="col-span-full">各路廠商強強聯手</span>
+            <span class="lg:justify-self-end">共同設計出接地氣的</span>
+            <span class="lg:justify-self-start">網頁互動挑戰關卡</span>
+          </h3>
+          <ul
+            e-name="關卡卡片列表"
+            class="container px-4 sm:px-9 flex flex-wrap justify-center items-center gap-10 text-neutral-1"
+          >
+            <li>
+              <div
+                e-name="關卡卡片1"
+                class="relative transition-transform-70 transform-3d w-[18.75rem]"
+              >
+                <div
+                  e-name="卡片正面"
+                  class="absolute inset-0 backface-hidden bg-gradient-to-b from-gradient-a1 to-gradient-a2 flex flex-col justify-center items-center gap-3 rounded-2xl"
+                >
+                  <span
+                    class="font-monument text-2xl text-neutral-1 tracking-widest"
+                    >WEEK 1</span
+                  >
+                  <img src="./assets/3stages/Lock-locked.png" alt="secret" />
+                </div>
+                <div
+                  e-name="卡片反面"
+                  class="bg-neutral-1 w-full backface-hidden flex flex-col justify-center items-center px-6 pt-4 py-6 rounded-2xl"
+                >
+                  <span
+                    class="bg-green-1 text-neutral-5 leading-4 font-bold px-2 py-1"
+                    ># 板塊設計</span
+                  >
+                  <h4 class="mt-5 text-primary-3 text-xl font-bold"
+                    >The F2E 活動網站設計</h4
+                  >
+                  <h5 class="mt-2 text-primary-3 text-lg">視差滾動</h5>
+                  <img src="./assets/3stages/dashboard.png" alt="示意圖1" />
+                  <div class="w-full flex justify-between items-center">
+                    <span class="font-monument text-primary-2 text-sm"
+                      >WEEK 1</span
+                    >
+                    <a href="#" class="text-primary-3 text-sm font-bold"
+                      >查看關卡細節
+                      <img
+                        class="inline align-text-top"
+                        src="./assets/3stages/arrow.svg"
+                        alt="箭頭圖示"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </section>
       </main>
     </div>
