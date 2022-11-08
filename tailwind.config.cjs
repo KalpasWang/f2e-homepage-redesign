@@ -76,7 +76,7 @@ module.exports = {
           lineHeight: "3rem",
         },
       ],
-      "3xl": [
+      "2.5xl": [
         "2.5rem", // 40px
         {
           lineHeight: "3.75rem",
@@ -115,6 +115,9 @@ module.exports = {
         25: "6.25rem", // 100px
         30: "7.5rem", // 120px
       },
+      width: {
+        15: "3.75rem",
+      },
       height: {
         "2px": "2px",
         41: "10.3125rem",
@@ -142,6 +145,9 @@ module.exports = {
       gridTemplateColumns: {
         "1-desc": "minmax(max-content, 32.5rem)",
         "3-desc": "1fr 140px 1fr",
+      },
+      borderWidth: {
+        3: "3px",
       },
     },
   },
