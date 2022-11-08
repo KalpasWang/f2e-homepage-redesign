@@ -135,6 +135,14 @@ module.exports = {
       gap: {
         7.5: "1.875rem", // 30px
       },
+      gridTemplateRows: {
+        "3-desc": "1fr 140px 1fr",
+        "7-desc": "1fr min-content 1fr min-content 1fr min-content auto",
+      },
+      gridTemplateColumns: {
+        "1-desc": "minmax(max-content, 32.5rem)",
+        "3-desc": "1fr 140px 1fr",
+      },
     },
   },
   plugins: [],
