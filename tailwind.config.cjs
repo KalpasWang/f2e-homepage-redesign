@@ -145,6 +145,7 @@ module.exports = {
       gridTemplateColumns: {
         "1-desc": "minmax(max-content, 32.5rem)",
         "3-desc": "1fr 140px 1fr",
+        "2-card": "repeat(2, max-content)",
       },
       borderWidth: {
         3: "3px",

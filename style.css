@@ -63,6 +63,14 @@
     backface-visibility: hidden;
   }
 
+  .border-gradient-card {
+    border-image: linear-gradient(
+      to right,
+      theme(colors.gradient-c1),
+      theme(colors.gradient-c2)
+    );
+  }
+
   .marquee {
     animation: marquee 2s linear infinite;
   }
