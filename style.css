@@ -64,11 +64,17 @@
   }
 
   .border-gradient-card {
-    border-image: linear-gradient(
-      to right,
-      theme(colors.gradient-c1),
-      theme(colors.gradient-c2)
-    );
+    background: linear-gradient(
+        theme(colors.neutral-3),
+        theme(colors.neutral-3)
+      ),
+      linear-gradient(
+        to left,
+        theme(colors.gradient-c1),
+        theme(colors.gradient-c2)
+      );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
   }
 
   .marquee {

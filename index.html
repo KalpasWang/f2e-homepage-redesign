@@ -993,7 +993,7 @@
             class="grid grid-cols-1 items-stretch justify-center justify-items-stretch gap-6 lg:grid-cols-2 lg:gap-10"
           >
             <li
-              class="border-gradient-card rounded-4xl border-2 bg-neutral-3 p-10"
+              class="border-gradient-card rounded-4xl border-2 border-transparent p-10"
             >
               <img
                 src="./assets/prize/judge.png"
@@ -1064,30 +1064,38 @@
             class="text-center text-2xl tracking-widest lg:text-3xl lg:font-bold"
             >Q&A</h2
           >
-          <nav comment="QA導覽列" class="relative mt-8 lg:mt-15">
-            <ul class="flex justify-center pb-2">
-              <li class="px-3 text-lg lg:px-4"
-                ><button aria-controls="panel1" type="button"
-                  >常見問題</button
-                ></li
-              >
-              <li class="px-3 text-lg lg:px-4"
-                ><button aria-controls="panel2" type="button"
-                  >UI 設計師常見問題</button
-                ></li
-              >
-              <li class="px-3 text-lg lg:px-4"
-                ><button aria-controls="panel3" type="button"
-                  >前端工程師常見問題</button
-                ></li
-              >
-              <li class="px-3 text-lg lg:px-4"
-                ><button aria-controls="panel4" type="button"
-                  >團體組常見問題</button
-                ></li
-              >
-            </ul>
-            <div class="absolute left-0 bottom-0 text-center"
+          <nav
+            role="tablist"
+            comment="QA導覽列"
+            class="relative mx-auto mt-8 w-fit pb-2 lg:mt-15"
+          >
+            <button
+              role="tab"
+              aria-controls="panel1"
+              type="button"
+              class="px-3 text-lg lg:px-4"
+              >常見問題</button
+            >
+            <button
+              role="tab"
+              aria-controls="panel2"
+              type="button"
+              class="px-3 text-lg lg:px-4"
+              >UI 設計師常見問題</button
+            ><button
+              role="tab"
+              aria-controls="panel3"
+              type="button"
+              class="px-3 text-lg lg:px-4"
+              >前端工程師常見問題</button
+            ><button
+              role="tab"
+              aria-controls="panel4"
+              type="button"
+              class="px-3 text-lg lg:px-4"
+              >團體組常見問題</button
+            >
+            <div id="indicator" class="absolute left-0 -bottom-1 text-center"
               ><span class="inline-block h-1 w-3 rounded-full bg-green-1"></span
             ></div>
           </nav>

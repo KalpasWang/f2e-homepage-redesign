@@ -26,6 +26,7 @@ module.exports = {
       "gradient-b2": "#55ffad",
       "gradient-c1": "#313a65",
       "gradient-c2": "#6e77e9",
+      transparent: "transparent",
     },
     boxShadow: {
       DEFAULT: "0 0 10px 0 rgb(0 0 0 / 0.6)",
