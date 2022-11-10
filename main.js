@@ -38,25 +38,37 @@ function handleQnATabs() {
   setIndicator(tabs[0]);
 
   window.addEventListener("resize", () => {
-    currentTab = select(".current-tab");
-    console.log(currentTab);
+    const currentTab = select(".current-tab");
     setIndicator(currentTab);
   });
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      const targetPanel = tab.getAttribute("aria-controls");
+      const targetId = tab.getAttribute("aria-controls");
+      const targetPanel = select(`#${targetId}`);
       const containerBox = tab.parentElement.getBoundingClientRect();
+      const otherPanels = gsap.utils.toArray(
+        `[role="tabpanel"]:not(#${targetId})`
+      );
+      const otherTabs = tabs.filter((el) => el !== tab);
 
-      gsap.to(`[role="tabpanel"]:not(#${targetPanel})`, {
+      gsap.to(otherPanels, {
         duration: 0.3,
         opacity: 0,
         display: "none",
+        onComplete() {
+          otherTabs.forEach((el) => {
+            el.classList.remove("current-tab");
+          });
+        },
       });
-      gsap.to(`#${targetPanel}`, {
+      gsap.to(targetPanel, {
         duration: 0.3,
         opacity: 1,
         display: "block",
+        onComplete() {
+          tab.classList.add("current-tab");
+        },
       });
       gsap.to(indicator, {
         duration: 0.3,

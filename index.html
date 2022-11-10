@@ -1059,64 +1059,294 @@
       </section>
       <!-- Q & A -->
       <section id="qna" class="bg-neutral-5 py-20 text-neutral-1 lg:py-25">
-        <div class="container">
+        <div class="container px-4">
           <h2
             class="text-center text-2xl tracking-widest lg:text-3xl lg:font-bold"
             >Q&A</h2
           >
-          <nav
-            role="tablist"
-            comment="QA導覽列"
-            class="relative mx-auto mt-8 w-fit pb-2 lg:mt-15"
-          >
-            <button
-              role="tab"
-              aria-controls="panel1"
-              type="button"
-              class="current-tab px-3 text-lg lg:px-4"
-              >常見問題</button
+          <!-- Q & A nav tabs -->
+          <div class="overflow-x-auto overflow-y-hidden pb-4">
+            <nav
+              role="tablist"
+              comment="QA導覽列"
+              class="relative mx-auto mt-8 w-fit whitespace-nowrap pb-2 lg:mt-15"
             >
-            <button
-              role="tab"
-              aria-controls="panel2"
-              type="button"
-              class="px-3 text-lg lg:px-4"
-              >UI 設計師常見問題</button
-            ><button
-              role="tab"
-              aria-controls="panel3"
-              type="button"
-              class="px-3 text-lg lg:px-4"
-              >前端工程師常見問題</button
-            ><button
-              role="tab"
-              aria-controls="panel4"
-              type="button"
-              class="px-3 text-lg lg:px-4"
-              >團體組常見問題</button
-            >
-            <div id="indicator" class="absolute left-0 -bottom-1 text-center"
-              ><span class="inline-block h-1 w-3 rounded-full bg-green-1"></span
-            ></div>
-          </nav>
+              <button
+                role="tab"
+                aria-controls="panel1"
+                type="button"
+                class="current-tab px-3 text-lg lg:px-4"
+                >常見問題</button
+              >
+              <button
+                role="tab"
+                aria-controls="panel2"
+                type="button"
+                class="px-3 text-lg lg:px-4"
+                >UI 設計師常見問題</button
+              ><button
+                role="tab"
+                aria-controls="panel3"
+                type="button"
+                class="px-3 text-lg lg:px-4"
+                >前端工程師常見問題</button
+              ><button
+                role="tab"
+                aria-controls="panel4"
+                type="button"
+                class="px-3 text-lg lg:px-4"
+                >團體組常見問題</button
+              >
+              <div id="indicator" class="absolute left-0 -bottom-1 text-center"
+                ><span
+                  class="inline-block h-1 w-3 rounded-full bg-green-1"
+                ></span
+              ></div>
+            </nav>
+          </div>
+          <!-- Q & A nav tabpanels -->
           <div
             class="mt-6 grid rounded-4xl bg-neutral-1 px-6 py-8 text-neutral-5 lg:mt-8 lg:p-20"
           >
-            <div role="tabpanel" id="panel1" class="area-full">A<br />AA</div>
-            <div role="tabpanel" id="panel2" class="area-full hidden opacity-0"
-              >B</div
-            >
-            <div role="tabpanel" id="panel3" class="area-full hidden opacity-0"
-              >C</div
-            >
-            <div role="tabpanel" id="panel4" class="area-full hidden opacity-0"
-              >D</div
-            >
+            <div role="tabpanel" id="panel1" class="area-full">
+              <div>
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q1</h4
+                >
+                <p class="text-xl font-bold"
+                  >如果某一週不小心挑戰失敗，是否能再繼續挑戰後面關卡？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，儘管那週挑戰失敗，之後您仍可以挑選喜歡的關卡進行挑戰，並在該關卡期限內繳交作品。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q2</h4
+                >
+                <p class="text-xl font-bold"
+                  >大家都好強，我怕我做的東西沒有達到過關門檻，不敢登錄作業</p
+                >
+                <p class="mt-4 text-lg"
+                  >這個活動並非競爭性質，每個參賽者都是你的隊友，最大的敵人是你自己，因為你必須定期練功前端開發，讓自己能夠順利完賽。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q3</h4
+                >
+                <p class="text-xl font-bold"
+                  >我不確定自己的版型有沒有符合過關門檻，要寫到什麼程度才有過關門檻？</p
+                >
+                <p class="mt-4 text-lg"
+                  >主辦單位其實不會去審核大家的程式碼，只要你認為當週你有針對主題有做到一定程度，就算是半完成品也請大方投稿，不用擔心。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q4</h4
+                >
+                <p class="text-xl font-bold"
+                  >我已經寫到一半了，但時間快來不及，可以先投稿嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，有投稿表示你還會持續努力在這次活動上。</p
+                >
+              </div>
+            </div>
+            <div role="tabpanel" id="panel2" class="area-full hidden opacity-0">
+              <div>
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q1</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >到時候投稿的平台是提供什麼呢？我也不像是工程師可以有Codepen
+                  上傳</p
+                >
+                <p class="mt-4 text-lg"
+                  >其中投稿的欄位裡面會有一個「線上標示文件」，像是 Adobe XD
+                  便有提供該服務(範例連結)，屆時提供標示文件後，便可讓其他前端工程師採用你的設計稿來開發。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q2</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >投稿上去的 UI 作品，我知道需要授權讓前端工程師組做成 Web
+                  介面，那授權部分可以設定嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >會有的，屆時平台投稿流程上，會讓您的作品可以選擇 CC0、CC BY
+                  等授權，以保障您的 UI 作品權益。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q3</h4
+                >
+                <p class="text-xl font-bold">一定要上傳「線上標示文件」嗎？</p>
+                <p class="mt-4 text-lg"
+                  >是的，因為這樣才有辦法讓其他前端工程師，能採用您的設計稿，將您的設計稿實作出網頁格式。如果您是使用
+                  Sketch，也可使用 Sketch Measure 編譯出來後，壓縮 ZIP
+                  到雲端空間 (Dropbox、Google Drive)。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q4</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >不能使用 PS、Illustrator 設計嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，團隊在協作過程中，一定也會先出些進度提供前端切版，有進度時您也可以先投稿，讓前端工程師可以先接手，之後再透過
+                  FB 社團來溝通進度即可。</p
+                >
+              </div>
+            </div>
+            <div role="tabpanel" id="panel3" class="area-full hidden opacity-0">
+              <div>
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q1</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >我可以不依照設計稿，自己做版面嗎？因為我自己想多練習JS /
+                  後端</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，The F2E
+                  活動是希望讓大家人人有功練，所以依照你自己想投入的方向練功即可。CSS
+                  也可以用框架，例如 Bootstrap。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q2</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >前端介面一定要長得一模一樣嗎？</p
+                >
+                <p class="mt-4 text-lg">不用，依照自己的想法來開發也可以</p>
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q3</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >有現成的網頁靜態頁面嗎？我想只練習 JS / 後端就好</p
+                >
+                <p class="mt-4 text-lg"
+                  >這段我們不會提供，畢竟每個人習慣的 Coding style
+                  又不一樣，產出的 HTML、CSS 並非是自己習慣的 Layout
+                  反而會更花時間。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q4</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >那我只想要練習 JS，HTML / CSS
+                  我用陽春版，不依照設計稿開發可以嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >只要您能找到 PS 或 Illustrator
+                  產出線上標示文件的方式就可以，因為前端工程師大部分皆比較少具有繪圖軟體，所以用線上標示文件將會減少許工程師協作上的溝通時間。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q5</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >當每週一題目出來後，我有一些設計進度也可以先投稿嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，你可以當做我們就是出一個主題，你依照那主題當作參考方向來開發即可。</p
+                >
+              </div>
+            </div>
+            <div role="tabpanel" id="panel4" class="area-full hidden opacity-0">
+              <div>
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q1</h4
+                >
+                <p class="text-xl font-bold uppercase">請問團體組最多幾人？</p>
+                <p class="mt-4 text-lg"
+                  >最多 4 人，投稿作品時請派一位組長來投稿即可。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q2</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >我對獎項有興趣，可以只做第三道主題就好嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以，您可以在這場活動中，和組員一起打磨第三道主題，不用三個主題都做。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q3</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >那團體第三道主題最晚投稿期限為？</p
+                >
+                <p class="mt-4 text-lg"
+                  >團體組投稿第三週 UI 最晚投稿時間為 11/21(一) 中午 12
+                  點，前端最晚投稿期限為 11/28(一) 中午 12 點。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q4</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >我們團體組比較想做手機 APP
+                  ，可以投稿並符合並符合評審門檻嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >您可以開發手機
+                  APP，若有在期限前投稿也能獲得數位獎狀。但評審門檻僅限 Web
+                  瀏覽器應用開發，Android、iOS APP
+                  則不在評審範圍內，故不符合評審門檻。</p
+                > </div
+              ><div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q5</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >請問除了前端開發、 UI
+                  設計外，還能做其他加值應用嗎？例如後端動態應用整合？</p
+                >
+                <p class="mt-4 text-lg"
+                  >可以的，只要能透過網頁瀏覽器操控您的服務，並有使用到 TDX API
+                  的任何一個
+                  API，您可以依照本次主題「全台公車動態時刻查詢應用服務」做最大的加值整合應用，甚至搭配後端應用，整合多個外部
+                  API 也是可以的。</p
+                >
+              </div>
+              <div class="mt-14">
+                <h4 class="font-monument text-xl tracking-widest text-primary-3"
+                  >Q6</h4
+                >
+                <p class="text-xl font-bold uppercase"
+                  >團體組的 UI 設計稿，可以讓『個人組 -
+                  前端工程師』組別採用嗎？</p
+                >
+                <p class="mt-4 text-lg"
+                  >不能，預設是不能讓『個人組-前端工程師』採用。</p
+                >
+              </div>
+            </div>
           </div>
-          <div class="mt-8 text-center lg:mt-15">
+          <div class="mt-8 mb-16 text-center lg:mt-15">
             <a
               href="#"
-              class="rounded-full bg-yellow-1 px-10 py-2 text-lg font-bold text-neutral-6 lg:px-20 lg:py-5"
+              class="inline-block rounded-full bg-yellow-1 px-10 py-2 text-lg font-bold text-neutral-6 lg:px-20 lg:py-5"
               >立即報名</a
             >
           </div>
