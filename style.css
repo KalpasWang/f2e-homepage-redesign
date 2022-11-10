@@ -69,9 +69,23 @@
         theme(colors.neutral-3)
       ),
       linear-gradient(
-        to left,
+        to left top,
         theme(colors.gradient-c1),
         theme(colors.gradient-c2)
+      );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .border-gradient-card:hover {
+    background: linear-gradient(
+        theme(colors.neutral-3),
+        theme(colors.neutral-3)
+      ),
+      linear-gradient(
+        to right bottom,
+        theme(colors.primary-1),
+        theme(colors.green-1)
       );
     background-origin: border-box;
     background-clip: padding-box, border-box;

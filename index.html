@@ -826,11 +826,7 @@
         </ul>
       </section>
       <!-- 活動說明 -->
-      <section
-        comment="活動說明"
-        id="event-description"
-        class="bg-neutral-4 py-20"
-      >
+      <section id="event-description" class="bg-neutral-4 py-20">
         <div class="container px-4">
           <h2
             class="mb-25 flex justify-center gap-9 text-2xl font-bold text-neutral-1 lg:text-3xl"
@@ -842,8 +838,9 @@
           <ul
             class="grid grid-cols-1-desc grid-rows-7-desc justify-center lg:grid-cols-3-desc lg:grid-rows-3-desc"
           >
+            <!-- 開放報名 -->
             <li
-              class="flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 lg:flex-row"
+              class="transition-30 group/item1 flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
             >
               <img
                 src="./assets/description/pen.png"
@@ -852,7 +849,7 @@
               />
               <div>
                 <h4
-                  class="text-center text-xl font-bold text-neutral-1 lg:text-2xl"
+                  class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item1:text-primary-1 lg:text-2xl"
                   >開放報名</h4
                 >
                 <div class="my-4 text-center text-neutral-1">
@@ -869,11 +866,11 @@
                 <p class="text-neutral-1">截止前可修改報名組別</p>
               </div>
             </li>
-
+            <!-- 箭頭指示 -->
             <li class="self-center justify-self-center lg:-rotate-90">
               <img src="./assets/description/down.png" alt="指示流程方向" />
             </li>
-
+            <!-- 各組別開賽 -->
             <li
               class="flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 lg:flex-row"
             >
@@ -903,13 +900,13 @@
                 </p>
               </div>
             </li>
-
+            <!-- 箭頭指示 -->
             <li
               class="self-center justify-self-center lg:col-start-3 lg:row-start-2"
             >
               <img src="./assets/description/down.png" alt="指示流程方向" />
             </li>
-
+            <!-- 登錄作品 -->
             <li
               class="flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 lg:col-start-3 lg:row-start-3 lg:flex-row"
             >
@@ -937,13 +934,13 @@
                 <p class="text-center text-neutral-1">依賽程登錄作品</p>
               </div>
             </li>
-
+            <!-- 箭頭指示 -->
             <li
               class="self-center justify-self-center lg:col-start-2 lg:row-start-3 lg:rotate-90"
             >
               <img src="./assets/description/down.png" alt="指示流程方向" />
             </li>
-
+            <!-- 線上直播 -->
             <li
               class="flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:flex-row"
             >
@@ -993,7 +990,7 @@
             class="grid grid-cols-1 items-stretch justify-center justify-items-stretch gap-6 lg:grid-cols-2 lg:gap-10"
           >
             <li
-              class="border-gradient-card rounded-4xl border-2 border-transparent p-10"
+              class="border-gradient-card transition-30 rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
             >
               <img
                 src="./assets/prize/judge.png"
@@ -1017,7 +1014,7 @@
               </div>
             </li>
             <li
-              class="border-gradient-card rounded-4xl border-2 bg-neutral-3 p-10"
+              class="border-gradient-card transition-30 rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
             >
               <img src="./assets/prize/coin.png" alt="獎金" class="mx-auto" />
               <h3
@@ -1380,7 +1377,7 @@
     <footer class="bg-neutral-5 py-6 text-center text-neutral-1 lg:py-8">
       &copy; 2022 All rights reserved. Design by
       <strong class="text-primary-1">Jenny Wu</strong> & Code by
-      <strong class="text-yellow-1">Kalpas Wang</strong>
+      <strong class="text-green-1">Kalpas Wang</strong>
     </footer>
     <script type="module" src="/main.js"></script>
   </body>
