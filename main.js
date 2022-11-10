@@ -24,24 +24,39 @@ function handleHeaderMenu() {
 function handleQnATabs() {
   const indicator = select("#indicator");
   const tabs = gsap.utils.toArray('[role="tab"]');
-  const containerBox = tabs[0].parentElement.getBoundingClientRect();
 
-  gsap.set(indicator, {
-    width: tabs[0].getBoundingClientRect().width,
-    left: tabs[0].getBoundingClientRect().left - containerBox.left,
+  function setIndicator(tab) {
+    const containerBox = tab.parentElement.getBoundingClientRect();
+    const tabBox = tab.getBoundingClientRect();
+
+    gsap.set(indicator, {
+      width: tabBox.width,
+      left: tabBox.left - containerBox.left,
+    });
+  }
+
+  setIndicator(tabs[0]);
+
+  window.addEventListener("resize", () => {
+    currentTab = select(".current-tab");
+    console.log(currentTab);
+    setIndicator(currentTab);
   });
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const targetPanel = tab.getAttribute("aria-controls");
+      const containerBox = tab.parentElement.getBoundingClientRect();
 
       gsap.to(`[role="tabpanel"]:not(#${targetPanel})`, {
         duration: 0.3,
-        autoAlpha: 0,
+        opacity: 0,
+        display: "none",
       });
       gsap.to(`#${targetPanel}`, {
         duration: 0.3,
-        autoAlpha: 1,
+        opacity: 1,
+        display: "block",
       });
       gsap.to(indicator, {
         duration: 0.3,

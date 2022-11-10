@@ -14,6 +14,7 @@ module.exports = {
       "neutral-3": "#151f3f",
       "neutral-4": "#0e1835",
       "neutral-5": "#06102b",
+      "neutral-6": "#000000",
       "primary-1": "#9da4ff",
       "primary-2": "#dcdeff",
       "primary-3": "#6e77e9",

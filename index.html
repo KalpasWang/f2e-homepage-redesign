@@ -1073,7 +1073,7 @@
               role="tab"
               aria-controls="panel1"
               type="button"
-              class="px-3 text-lg lg:px-4"
+              class="current-tab px-3 text-lg lg:px-4"
               >常見問題</button
             >
             <button
@@ -1100,31 +1100,24 @@
             ></div>
           </nav>
           <div
-            class="relative mt-6 rounded-4xl bg-neutral-1 px-6 py-8 text-neutral-5 lg:mt-8 lg:p-20"
+            class="mt-6 grid rounded-4xl bg-neutral-1 px-6 py-8 text-neutral-5 lg:mt-8 lg:p-20"
           >
-            <div
-              role="tabpanel"
-              id="panel1"
-              class="absolute inset-x-6 inset-y-8 lg:inset-20"
-              >A</div
-            >
-            <div
-              role="tabpanel"
-              id="panel2"
-              class="invisible absolute inset-x-6 inset-y-8 opacity-0 lg:inset-20"
+            <div role="tabpanel" id="panel1" class="area-full">A<br />AA</div>
+            <div role="tabpanel" id="panel2" class="area-full hidden opacity-0"
               >B</div
             >
-            <div
-              role="tabpanel"
-              id="panel3"
-              class="invisible absolute inset-x-6 inset-y-8 opacity-0 lg:inset-20"
+            <div role="tabpanel" id="panel3" class="area-full hidden opacity-0"
               >C</div
             >
-            <div
-              role="tabpanel"
-              id="panel4"
-              class="invisible absolute inset-x-6 inset-y-8 opacity-0 lg:inset-20"
+            <div role="tabpanel" id="panel4" class="area-full hidden opacity-0"
               >D</div
+            >
+          </div>
+          <div class="mt-8 text-center lg:mt-15">
+            <a
+              href="#"
+              class="rounded-full bg-yellow-1 px-10 py-2 text-lg font-bold text-neutral-6 lg:px-20 lg:py-5"
+              >立即報名</a
             >
           </div>
         </div>

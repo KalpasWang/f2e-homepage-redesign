@@ -77,6 +77,10 @@
     background-clip: padding-box, border-box;
   }
 
+  .area-full {
+    grid-area: 1/-1;
+  }
+
   .marquee {
     animation: marquee 2s linear infinite;
   }
