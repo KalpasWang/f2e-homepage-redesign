@@ -7,9 +7,9 @@
     font-size: clamp(2.5rem, 8vh, 5rem);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .opening-title {
-      font-size: clamp(4rem, 15vh, 8rem);
+      font-size: clamp(4rem, 13vw, 20rem);
     }
   }
 }
