@@ -124,6 +124,7 @@ module.exports = {
       height: {
         "2px": "2px",
         41: "10.3125rem",
+        "opening-mobile": "calc(100vh - 72px)",
       },
       minHeight: {
         40: "40rem",
