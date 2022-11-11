@@ -80,47 +80,58 @@
         class="relative flex h-screen items-center justify-center bg-neutral-5 py-40 text-neutral-1 lg:h-auto lg:pt-24 lg:pb-60"
       >
         <div class="relative z-10 text-center">
-          <h1>
+          <h1 id="big-title">
             <span
-              class="text-shadow block font-pilot text-2xl uppercase tracking-20 lg:relative lg:left-[45%] lg:text-3.5xl"
+              class="text-shadow block overflow-hidden font-pilot text-2xl uppercase tracking-20 lg:relative lg:left-[45%] lg:text-3.5xl"
               >4th</span
             ><span
-              class="text-shadow block whitespace-nowrap font-monument text-3xl tracking-20 lg:text-4xl"
+              class="text-shadow block overflow-hidden whitespace-nowrap font-monument text-3xl tracking-20 lg:text-4xl"
               >THE F2E</span
             >
           </h1>
-          <h2 class="text-lg font-bold tracking-80 lg:text-xxl">
+          <h2
+            id="subtitle"
+            class="overflow-hidden text-lg font-bold tracking-80 lg:text-xxl"
+          >
             互動式網頁設計
           </h2>
           <div class="mt-11 text-center">
             <a
+              id="signup-btn"
               href="#"
               class="inline-block rounded-full bg-yellow-1 px-10 py-3 text-lg font-bold tracking-wide text-neutral-5 transition-all hover:bg-yellow-2 hover:shadow hover:shadow-yellow-2"
               >立即報名</a
             >
           </div>
           <img
+            id="piece1"
             src="./assets/piece1.png"
             alt="背景圖片1"
             class="absolute -left-3 -top-16 -rotate-20 lg:-left-64 lg:top-3 lg:w-[150px]"
           />
           <img
+            id="piece2"
             src="./assets/piece2.png"
             alt="背景圖片2"
             class="absolute right-3 -bottom-36 rotate-16.6 sm:-right-6 lg:-right-[35%] lg:top-[45%] lg:w-[250px]"
           />
           <img
+            id="illustration1"
             src="./assets/illustration01.svg"
             alt="背景圖片3"
             class="absolute hidden lg:-right-[60%] lg:top-2 lg:block"
           />
           <img
+            id="illustration2"
             src="./assets/illustration02.svg"
             alt="背景圖片4"
             class="absolute hidden lg:-left-32 lg:bottom-0 lg:block"
           />
         </div>
-        <div class="absolute bottom-8 right-0 w-full overflow-hidden">
+        <div
+          id="marquee"
+          class="absolute bottom-8 right-0 w-full overflow-hidden"
+        >
           <div class="marquee flex w-full justify-end gap-7.5">
             <img src="./assets/star.svg" alt="star" />
             <img src="./assets/join-us.svg" alt="加入我們" />
