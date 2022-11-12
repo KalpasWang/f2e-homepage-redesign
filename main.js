@@ -38,7 +38,6 @@ function setSmoothScroll() {
 }
 
 function initOpeningAnimation() {
-  const hero = select("#hero");
   const bigTitle = select("#big-title");
   const subtitle = select("#subtitle");
   const pieceCode = select("#piece1");
@@ -48,23 +47,42 @@ function initOpeningAnimation() {
   const signupBtn = select("#signup-btn");
   const marquee = select("#marquee");
 
-  window.scrollTo(0, 0);
-  document.body.classList.add("h-screen", "overflow-scroll");
-  const text = new SplitType(subtitle);
+  SplitType.create(subtitle);
 
-  const t1 = gsap.timeline({
+  const tl = gsap.timeline({
     defaults: {
       duration: 0.5,
       ease: "power3.inOut",
     },
+    onStart() {
+      window.scrollTo(0, 0);
+      document.body.classList.add("h-screen", "overflow-hidden");
+    },
+    onComplete() {
+      document.body.classList.remove("h-screen", "overflow-hidden");
+    },
   });
 
-  t1.from(hero, {
-    yPercent: -100,
+  tl.from("#hero", {
+    delay: 0.5,
+    yPercent: -30,
+    scaleY: 0,
+    transformOrigin: "top",
     duration: 1.2,
     autoAlpha: 0,
   })
+    .from(
+      "header",
+      {
+        delay: 0.5,
+        yPercent: -100,
+        duration: 0.05,
+        ease: "none",
+      },
+      "<"
+    )
     .from("header .container", {
+      yPercent: -100,
       autoAlpha: 0,
     })
     .from(bigTitle, {
@@ -82,9 +100,55 @@ function initOpeningAnimation() {
         stagger: 0.08,
       },
       "-=0.2"
+    )
+    .from(
+      signupBtn,
+      {
+        scaleX: 0,
+        transformOrigin: "left",
+        autoAlpha: 0,
+      },
+      "-=0.3"
+    )
+    .from(marquee, {
+      autoAlpha: 0,
+    })
+    .from(
+      [pieceCode, pieceDashboard],
+      {
+        autoAlpha: 0,
+        transformOrigin: "50% 50%",
+        scale: 0,
+        ease: "back.out",
+        stagger: 0.1,
+      },
+      "-=0.2"
     );
 
-  document.body.classList.remove("h-screen", "overflow-scroll");
+  if (leftLine.style.display !== "none") {
+    tl.fromTo(
+      leftLine,
+      {
+        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        ease: "none",
+        duration: 1,
+      },
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      },
+      "-=0.5"
+    ).fromTo(
+      rightLine,
+      {
+        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        ease: "none",
+        duration: 1,
+      },
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      }
+    );
+  }
 }
 
 function handleHeaderMenu() {
