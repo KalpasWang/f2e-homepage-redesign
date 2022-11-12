@@ -133,7 +133,7 @@ function initOpeningAnimation() {
     tl.fromTo(
       leftLine,
       {
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        clipPath: "polygon(0 0, 0% 0, 0 100%, 0% 100%)",
         ease: "none",
         duration: 1,
       },
@@ -144,15 +144,26 @@ function initOpeningAnimation() {
     ).fromTo(
       rightLine,
       {
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+        clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
         ease: "none",
         duration: 1,
       },
       {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
       }
     );
   }
+
+  [pieceCode, , pieceDashboard].forEach((el, i) => {
+    gsap.to(el, {
+      delay: i * 0.6,
+      duration: 1,
+      yPercent: -20,
+      yoyo: true,
+      repeat: -1,
+      ease: "none",
+    });
+  });
 }
 
 function handleQuestionsAnimation() {
@@ -173,11 +184,24 @@ function handleQuestionsAnimation() {
       scale: 0,
       transformOrigin: "50% ,50%",
       ease: "elastic.out",
-      duration: 0.6,
-      stagger: 0.3,
+      duration: 0.3,
+      stagger: 0.2,
       scrollTrigger: {
         trigger: "#q" + n,
-        start: "top center",
+        start: "top 65%",
+      },
+      onComplete() {
+        gsap.to(group, {
+          opacity: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: "#question" + n,
+            start: "top 25%",
+            end: "center 0%",
+            markers: true,
+            scrub: true,
+          },
+        });
       },
     });
   });
