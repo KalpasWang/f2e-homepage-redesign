@@ -16,6 +16,7 @@ function init() {
   // 動畫處理
   initOpeningAnimation();
   handleQuestionsAnimation();
+  handleStagesAnimationn();
 }
 
 init();
@@ -198,12 +199,45 @@ function handleQuestionsAnimation() {
             trigger: "#question" + n,
             start: "top 25%",
             end: "center 0%",
-            markers: true,
             scrub: true,
           },
         });
       },
     });
+  });
+}
+
+function handleStagesAnimationn() {
+  const cards = gsap.utils.toArray([
+    "#stage-card1",
+    "#stage-card2",
+    "#stage-card3",
+  ]);
+
+  // ScrollTrigger.batch(cards, {
+  //   onEnter(batch) {
+  //     gsap.from(batch, {
+  //       stagger: 0.6,
+  //       rotateY: 0,
+  //       yPercent: 50,
+  //       duration: 1,
+  //       start: "top 80%",
+  //       end: "top 20%",
+  //       scrub: true,
+  //     });
+  //   },
+  // });
+  gsap.from(cards, {
+    stagger: 0.6,
+    rotateY: 0,
+    yPercent: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: cards,
+      start: "top 100%",
+      end: "top 20%",
+      scrub: true,
+    },
   });
 }
 
