@@ -8,10 +8,14 @@ const select = (e) => document.querySelector(e);
 gsap.registerPlugin(ScrollTrigger);
 
 function init() {
+  // 前處理
   setSmoothScroll();
-  initOpeningAnimation();
   handleHeaderMenu();
   handleQnATabs();
+
+  // 動畫處理
+  initOpeningAnimation();
+  handleQuestionsAnimation();
 }
 
 init();
@@ -149,6 +153,34 @@ function initOpeningAnimation() {
       }
     );
   }
+}
+
+function handleQuestionsAnimation() {
+  // const questions = gsap.utils.toArray(['#q1', '#q2', '#q3'])
+
+  [1, 2, 3].forEach((n) => {
+    const mainQ = select("#question" + n);
+    const emotion = select("#emotion" + n);
+    const shape = select("#shape" + n);
+    const polygon = select("#polygon" + n);
+    let group = [mainQ, emotion, shape, polygon];
+    if (n === 3) {
+      group.pop();
+    }
+
+    gsap.from(group, {
+      autoAlpha: 0,
+      scale: 0,
+      transformOrigin: "50% ,50%",
+      ease: "elastic.out",
+      duration: 0.6,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: "#q" + n,
+        start: "top center",
+      },
+    });
+  });
 }
 
 function handleHeaderMenu() {
