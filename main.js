@@ -17,6 +17,7 @@ function init() {
   initOpeningAnimation();
   handleQuestionsAnimation();
   handleStagesAnimationn();
+  handleEventDescription();
 }
 
 init();
@@ -214,19 +215,6 @@ function handleStagesAnimationn() {
     "#stage-card3",
   ]);
 
-  // ScrollTrigger.batch(cards, {
-  //   onEnter(batch) {
-  //     gsap.from(batch, {
-  //       stagger: 0.6,
-  //       rotateY: 0,
-  //       yPercent: 50,
-  //       duration: 1,
-  //       start: "top 80%",
-  //       end: "top 20%",
-  //       scrub: true,
-  //     });
-  //   },
-  // });
   gsap.from(cards, {
     stagger: 0.6,
     rotateY: 0,
@@ -238,6 +226,37 @@ function handleStagesAnimationn() {
       end: "top 20%",
       scrub: true,
     },
+  });
+}
+
+function handleEventDescription() {
+  const items = gsap.utils.toArray(".flow");
+
+  items.forEach((item, i) => {
+    gsap.from(item, {
+      duration: 1,
+      delay() {
+        const mq = matchMedia("(min-width: 1024px)");
+        let delay = 0;
+        if (mq && i !== 3) {
+          const index = i > 3 ? i - 1 : i;
+          delay = 0.7 * (index % 3);
+        }
+        console.log(item, delay);
+        return delay;
+      },
+      opacity: 0,
+      // scale: 0.9,
+      y: 200,
+      ease: "back.out",
+      // transformOrigin: "50% 50%",
+      scrollTrigger: {
+        trigger: item,
+        start: "top 100%",
+        end: "top 65%",
+        scrub: true,
+      },
+    });
   });
 }
 
