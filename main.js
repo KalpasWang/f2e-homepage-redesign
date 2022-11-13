@@ -168,6 +168,30 @@ function initOpeningAnimation() {
       ease: "none",
     });
   });
+
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#questions",
+      start: "top bottom",
+      end: "top 40%",
+      scrub: true,
+    },
+  });
+
+  tl2
+    .to([bigTitle, subtitle, signupBtn], {
+      y: "10vh",
+      duration: 3,
+    })
+    .to(
+      [pieceCode, pieceDashboard, rightLine, leftLine, marquee],
+      {
+        y: -100,
+        autoAlpha: 0,
+        duration: 3,
+      },
+      "<"
+    );
 }
 
 function handleQuestionsAnimation() {
