@@ -1005,18 +1005,21 @@
       <section id="prize" class="bg-neutral-4 py-20 text-neutral-1 lg:py-25">
         <div class="container px-4">
           <h2 class="mb-15 text-center text-xl font-bold">
-            <span class="block lg:inline">區區修煉已經無法滿足了嗎？</span>
-            <span class="block lg:inline">還有比賽等著你！</span></h2
-          >
+            <span id="prize-h2-1" class="block lg:inline"></span>
+            <span id="prize-h2-2" class="block lg:inline"></span
+          ></h2>
           <div
+            id="runway"
             class="mb-15 flex items-end justify-between border-b-3 border-neutral-1"
           >
             <img
+              id="flag"
               src="./assets/prize/flag.svg"
               class="w-9 lg:w-14"
               alt="旗幟圖示"
             />
             <img
+              id="car"
               src="./assets/prize/car.svg"
               class="relative -bottom-1 w-15 lg:w-20"
               alt="跑車圖示"
@@ -1025,66 +1028,76 @@
           <ul
             class="grid grid-cols-1 items-stretch justify-center justify-items-stretch gap-6 lg:grid-cols-2 lg:gap-10"
           >
-            <li
-              class="border-gradient-card transition-30 rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
-            >
-              <img
-                src="./assets/prize/judge.png"
-                alt="評審機制"
-                class="mx-auto"
-              />
-              <h3
-                class="text-shadow-p1 text-center text-2xl font-bold text-primary-1 lg:text-2.5xl"
-                >評審機制</h3
+            <li>
+              <div
+                class="border-gradient-card transition-30 h-full rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
               >
-              <div class="mt-10 lg:mt-14">
-                <h5 class="text-xl font-bold">初選：</h5>
-                <p class="text-lg">將由六角學院前端、UI 評審進行第一波篩選。</p>
-              </div>
-              <div class="mt-8">
-                <h5 class="text-xl font-bold">決選：</h5>
-                <p class="text-lg"
-                  >由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五)
-                  由評審進行直播公布名單！</p
+                <img
+                  src="./assets/prize/judge.png"
+                  alt="評審機制"
+                  class="mx-auto"
+                />
+                <h3
+                  class="text-shadow-p1 text-center text-2xl font-bold text-primary-1 lg:text-2.5xl"
+                  >評審機制</h3
                 >
+                <div class="mt-10 lg:mt-14">
+                  <h5 class="text-xl font-bold">初選：</h5>
+                  <p class="text-lg"
+                    >將由六角學院前端、UI 評審進行第一波篩選。</p
+                  >
+                </div>
+                <div class="mt-8">
+                  <h5 class="text-xl font-bold">決選：</h5>
+                  <p class="text-lg"
+                    >由六角學院與贊助廠商討論，進行最後篩選，並於 12/30(五)
+                    由評審進行直播公布名單！</p
+                  >
+                </div>
               </div>
             </li>
-            <li
-              class="border-gradient-card transition-30 rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
-            >
-              <img src="./assets/prize/coin.png" alt="獎金" class="mx-auto" />
-              <h3
-                class="text-shadow-p1 text-center text-2xl font-bold text-primary-1 lg:text-2.5xl"
-                >獎金</h3
-              >
+            <li>
               <div
-                class="mt-10 grid grid-flow-row justify-start lg:mt-14 lg:grid-cols-2-card"
+                class="border-gradient-card transition-30 h-full rounded-4xl border-2 border-transparent p-10 lg:hover:-translate-y-7"
               >
-                <h5 class="text-lg font-bold">初選佳作：</h5>
-                <p class="my-1 text-lg lg:my-0"
-                  >共六十位<span class="ml-2 text-green-1">數位獎狀</span></p
+                <img src="./assets/prize/coin.png" alt="獎金" class="mx-auto" />
+                <h3
+                  class="text-shadow-p1 text-center text-2xl font-bold text-primary-1 lg:text-2.5xl"
+                  >獎金</h3
                 >
-                <p class="text-neutral-2">每週主題個人組十位、</p>
-                <p class="text-neutral-2">團體組十組</p>
-              </div>
-              <div
-                class="mt-6 grid grid-flow-row justify-start lg:grid-cols-2-card"
-              >
-                <h5 class="text-lg font-bold">個人企業獎：</h5>
-                <p class="my-1 text-lg lg:my-0"
-                  >共六位<span class="ml-2 text-green-1">NTD 3,000/位</span></p
+                <div
+                  class="mt-10 grid grid-flow-row justify-start lg:mt-14 lg:grid-cols-2-card"
                 >
-                <p class="text-neutral-2">每週主題個人組十位、</p>
-                <p class="text-neutral-2">團體組十組</p>
-              </div>
-              <div
-                class="mt-6 grid grid-flow-row justify-start lg:grid-cols-2-card"
-              >
-                <h5 class="text-lg font-bold">團體企業獎：</h5>
-                <p class="my-1 text-lg lg:my-0"
-                  >共三組<span class="ml-2 text-green-1">NTD 10,000/組</span></p
+                  <h5 class="text-lg font-bold">初選佳作：</h5>
+                  <p class="my-1 text-lg lg:my-0"
+                    >共六十位<span class="ml-2 text-green-1">數位獎狀</span></p
+                  >
+                  <p class="text-neutral-2">每週主題個人組十位、</p>
+                  <p class="text-neutral-2">團體組十組</p>
+                </div>
+                <div
+                  class="mt-6 grid grid-flow-row justify-start lg:grid-cols-2-card"
                 >
-                <p class="text-neutral-2">每週主題各 1 組</p>
+                  <h5 class="text-lg font-bold">個人企業獎：</h5>
+                  <p class="my-1 text-lg lg:my-0"
+                    >共六位<span class="ml-2 text-green-1"
+                      >NTD 3,000/位</span
+                    ></p
+                  >
+                  <p class="text-neutral-2">每週主題個人組十位、</p>
+                  <p class="text-neutral-2">團體組十組</p>
+                </div>
+                <div
+                  class="mt-6 grid grid-flow-row justify-start lg:grid-cols-2-card"
+                >
+                  <h5 class="text-lg font-bold">團體企業獎：</h5>
+                  <p class="my-1 text-lg lg:my-0"
+                    >共三組<span class="ml-2 text-green-1"
+                      >NTD 10,000/組</span
+                    ></p
+                  >
+                  <p class="text-neutral-2">每週主題各 1 組</p>
+                </div>
               </div>
             </li>
           </ul>
@@ -1098,7 +1111,7 @@
             >Q&A</h2
           >
           <!-- Q & A nav tabs -->
-          <div class="overflow-x-auto overflow-y-hidden pb-4">
+          <div id="qna-tabs" class="overflow-x-auto overflow-y-hidden pb-4">
             <nav
               role="tablist"
               comment="QA導覽列"
@@ -1139,6 +1152,7 @@
           </div>
           <!-- Q & A nav tabpanels -->
           <div
+            id="qna-tabpanels"
             class="mt-6 grid rounded-4xl bg-neutral-1 px-6 py-8 text-neutral-5 lg:mt-8 lg:p-20"
           >
             <div role="tabpanel" id="panel1" class="area-full">
@@ -1379,7 +1393,7 @@
           <div class="mt-8 mb-16 text-center lg:mt-15">
             <a
               href="#"
-              class="inline-block rounded-full bg-yellow-1 px-10 py-2 text-lg font-bold text-neutral-6 lg:px-20 lg:py-5"
+              class="inline-block rounded-full bg-yellow-1 px-10 py-2 text-lg font-bold text-neutral-6 transition-all hover:bg-yellow-2 hover:shadow hover:shadow-yellow-2 lg:px-20 lg:py-5"
               >立即報名</a
             >
           </div>
@@ -1389,19 +1403,26 @@
       <section id="sponsors" class="bg-neutral-3 py-20 text-neutral-1 lg:py-25">
         <div class="relative mx-auto w-fit text-center">
           <img
+            id="sopnsors-star1"
             src="./assets/sponsors/Star-big.svg"
             alt="star1"
             class="absolute top-1/2 -left-12 -translate-y-1/2"
           />
           <img
+            id="sopnsors-star2"
             src="./assets/sponsors/Star-small.svg"
             alt="star2"
             class="absolute -top-5 -right-7"
           />
-          <h2 class="font-monument text-2xl tracking-widest">SPONSORS</h2>
-          <h2 class="text-xl font-bold md:text-2xl">鑽石級贊助商</h2>
+          <h2 id="sponsors-h2-1" class="font-monument text-2xl tracking-widest"
+            >SPONSORS</h2
+          >
+          <h2 id="sponsors-h2-2" class="text-xl font-bold md:text-2xl"
+            >鑽石級贊助商</h2
+          >
         </div>
         <div
+          id="sponsors-wrapper"
           class="mt-10 mb-15 flex flex-col items-center justify-center gap-6 sm:flex-row lg:mt-15 lg:mb-25 lg:gap-16"
         >
           <img src="./assets/sponsors/block.png" alt="板塊 Block Studio" />

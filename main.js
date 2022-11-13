@@ -1,11 +1,11 @@
 import "./style.css";
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap, ScrollTrigger, TextPlugin } from "gsap/all";
 import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
 const select = (e) => document.querySelector(e);
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function init() {
   // 前處理
@@ -18,6 +18,9 @@ function init() {
   handleQuestionsAnimation();
   handleStagesAnimationn();
   handleEventDescription();
+  setPrizeAnimation();
+  setQnA();
+  setSponsors();
 }
 
 init();
@@ -231,10 +234,9 @@ function handleStagesAnimationn() {
 
 function handleEventDescription() {
   const items = gsap.utils.toArray(".event-item");
-  const mq = matchMedia("(min-width: 1024px)");
 
   ScrollTrigger.batch(items, {
-    interval: 0.1,
+    interval: 0.5,
     batchMax: 3,
     start: "top 100%",
     end: "top 65%",
@@ -247,37 +249,138 @@ function handleEventDescription() {
         y: 200,
         ease: "back.out",
         transformOrigin: "50% 50%",
-        scrollTrigger: {
-          // scrub: true,
-        },
       });
     },
   });
-  // items.forEach((item, i) => {
-  //   gsap.from(item, {
-  //     duration: 1,
-  //     delay() {
-  //       let delay = 0;
-  //       if (mq && i !== 3) {
-  //         const index = i > 3 ? i - 1 : i;
-  //         delay = 0.7 * (index % 3);
-  //       }
-  //       console.log(item, delay);
-  //       return delay;
-  //     },
-  //     opacity: 0,
-  //     // scale: 0.9,
-  //     y: 200,
-  //     ease: "back.out",
-  //     // transformOrigin: "50% 50%",
-  //     scrollTrigger: {
-  //       trigger: item,
-  //       start: "top 100%",
-  //       end: "top 65%",
-  //       scrub: true,
-  //     },
-  //   });
-  // });
+}
+
+function setPrizeAnimation() {
+  const texts = ["區區修煉已經無法滿足了嗎？", "還有比賽等著你！"];
+
+  // 標題 animation
+  const tl1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#prize h2",
+      start: "top 80%",
+    },
+  });
+  tl1
+    .to("#prize-h2-1", {
+      text: texts[0],
+      duration: 1,
+    })
+    .to("#prize-h2-2", {
+      text: texts[1],
+      duration: 1,
+      delay: 0.3,
+    });
+
+  // 賽車 animation
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#runway",
+      start: "top 90%",
+      end: "center 40%",
+      scrub: true,
+    },
+  });
+  const trackWidth = select("#runway").offsetWidth;
+  const carWidth = select("#car").offsetWidth;
+
+  tl2
+    .to("#car", {
+      duration: 1,
+      x: -1 * (trackWidth - carWidth),
+      ease: "none",
+    })
+    .to(
+      "#flag",
+      {
+        duration: 0.2,
+        rotate: -45,
+        x: -30,
+        y: -30,
+      },
+      "-=0.05"
+    );
+
+  // 卡片動畫
+  const cards = gsap.utils.toArray("#prize li");
+  cards.forEach((card, i) => {
+    const factor = i === 0 ? -1 : 1;
+    gsap.from(card, {
+      duration: 1,
+      x: factor * 100,
+      y: 200,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 70%",
+      },
+    });
+  });
+}
+
+function setQnA() {
+  gsap.from("#qna h2", {
+    color: "#06102b",
+    duration: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#qna h2",
+      start: "top 80%",
+    },
+  });
+
+  gsap.from(["#qna-tabs", "#qna-tabpanels"], {
+    opacity: 0,
+    duration: 1,
+    ease: "none",
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: "#qna-tabs",
+      start: "top 70%",
+    },
+  });
+}
+
+function setSponsors() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#sponsors",
+      start: "top 80%",
+    },
+  });
+
+  tl.from("#sponsors-h2-1", {
+    opacity: 0,
+    yPercent: 100,
+    duration: 0.7,
+  })
+    .from("#sponsors-h2-2", {
+      opacity: 0,
+      yPercent: 100,
+      duration: 0.5,
+    })
+    .from(["#sopnsors-star1", "#sopnsors-star2"], {
+      scale: 0.5,
+      transformOrigin: "50% 50%",
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.25,
+    });
+
+  gsap.from("#sponsors-wrapper img", {
+    y: 500,
+    stagger: 0.2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#sponsors-wrapper",
+      start: "top 100%",
+      end: "center 60%",
+      scrub: true,
+    },
+  });
 }
 
 function handleHeaderMenu() {
