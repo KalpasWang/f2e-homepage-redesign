@@ -4,7 +4,7 @@
 
 # Demo
 
-[https://f2e-homepage-redesign.vercel.app/][https://f2e-homepage-redesign.vercel.app/]
+[https://f2e-homepage-redesign.vercel.app/](https://f2e-homepage-redesign.vercel.app/)
 
 # 使用技術
 
