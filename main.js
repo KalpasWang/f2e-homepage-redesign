@@ -16,14 +16,13 @@ function init() {
   // 動畫處理
   initOpeningAnimation();
   handleQuestionsAnimation();
+  set2ndBanner();
   handleStagesAnimationn();
   handleEventDescription();
   setPrizeAnimation();
   setQnA();
   setSponsors();
 }
-
-init();
 
 function setSmoothScroll() {
   const lenis = new Lenis({
@@ -209,6 +208,80 @@ function handleQuestionsAnimation() {
       },
     });
   });
+}
+
+function set2ndBanner() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#opening",
+      start: "top top",
+      pin: true,
+      scrub: true,
+    },
+  });
+
+  tl.from("#opening", {
+    backgroundColor: "#000000",
+    duration: 2,
+  })
+    .from(["#stamp1", "#stamp2", "#hand1", "#hand2"], {
+      duration: 2,
+      delay: 1,
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      xPercent: -50,
+      yPercent: -50,
+      scale: 0,
+    })
+    .from(
+      ["#opening-title", "#opening-bg"],
+      {
+        duration: 2,
+        delay: 1,
+        scale: 0.1,
+        stagger: 0.3,
+        autoAlpha: 0,
+        transformOrigin: "50%, 50%",
+      },
+      "<"
+    )
+    .from("#opening-subtitle", {
+      autoAlpha: 0,
+      delay: 1,
+      duration: 2,
+    })
+    .from("#opening-marquee1-wrapper", {
+      autoAlpha: 0,
+      duration: 2,
+    })
+    .from(
+      "#opening-marquee1",
+      {
+        autoAlpha: 0,
+        duration: 2,
+        xPercent: 20,
+      },
+      "<"
+    )
+    .from(
+      "#opening-marquee2-wrapper",
+      {
+        autoAlpha: 0,
+        duration: 2,
+      },
+      "<"
+    )
+    .from(
+      "#opening-marquee2",
+      {
+        autoAlpha: 0,
+        duration: 2,
+        xPercent: -20,
+      },
+      "<"
+    );
 }
 
 function handleStagesAnimationn() {
@@ -451,3 +524,5 @@ function handleQnATabs() {
     });
   });
 }
+
+init();
