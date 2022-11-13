@@ -855,135 +855,146 @@
             class="grid grid-cols-1-desc grid-rows-7-desc justify-center lg:grid-cols-3-desc lg:grid-rows-3-desc"
           >
             <!-- 開放報名 -->
-            <li
-              id="event1"
-              class="flow transition-30 group/item1 flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
-            >
-              <img
-                src="./assets/description/pen.png"
-                height="100"
-                alt="開放報名"
-              />
-              <div>
-                <h4
-                  class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item1:text-primary-1 lg:text-2xl"
-                  >開放報名</h4
-                >
-                <div class="my-4 text-center text-neutral-1">
-                  <p
-                    ><span class="mr-2 text-green-1">10/13</span>(四) 早上
-                    11:00</p
+            <li class="event-item">
+              <div
+                id="event1"
+                class="flow transition-30 group/item1 flex h-full flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
+              >
+                <img
+                  src="./assets/description/pen.png"
+                  height="100"
+                  alt="開放報名"
+                />
+                <div>
+                  <h4
+                    class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item1:text-primary-1 lg:text-2xl"
+                    >開放報名</h4
                   >
-                  <p class="my-1 text-center text-xs font-bold">|</p>
-                  <p
-                    ><span class="mr-2 text-green-1">10/30</span>(日) 晚上
-                    23:59</p
-                  >
+                  <div class="my-4 text-center text-neutral-1">
+                    <p
+                      ><span class="mr-2 text-green-1">10/13</span>(四) 早上
+                      11:00</p
+                    >
+                    <p class="my-1 text-center text-xs font-bold">|</p>
+                    <p
+                      ><span class="mr-2 text-green-1">10/30</span>(日) 晚上
+                      23:59</p
+                    >
+                  </div>
+                  <p class="text-neutral-1">截止前可修改報名組別</p>
                 </div>
-                <p class="text-neutral-1">截止前可修改報名組別</p>
               </div>
             </li>
             <!-- 箭頭指示 -->
-            <li
-              id="arrow1"
-              class="flow self-center justify-self-center lg:-rotate-90"
-            >
-              <img src="./assets/description/down.png" alt="指示流程方向" />
+            <li class="event-item self-center justify-self-center">
+              <div id="arrow1" class="flow lg:-rotate-90">
+                <img src="./assets/description/down.png" alt="指示流程方向" />
+              </div>
             </li>
             <!-- 各組別開賽 -->
-            <li
-              id="event2"
-              class="flow transition-30 group/item2 flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
-            >
-              <img
-                src="./assets/description/clock.png"
-                height="100"
-                alt="各組別開賽"
-              />
-              <div>
-                <h4
-                  class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item2:text-primary-1 lg:text-2xl"
-                  >各組別開賽</h4
-                >
-                <div class="my-4 text-center text-neutral-1">
-                  <p class="mb-1"
-                    ><span class="mr-2 text-green-1">10/31</span
-                    >UI組、團體組開賽</p
+            <li class="event-item">
+              <div
+                id="event2"
+                class="flow transition-30 group/item2 flex h-full flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row lg:gap-0"
+              >
+                <img
+                  src="./assets/description/clock.png"
+                  height="100"
+                  alt="各組別開賽"
+                />
+                <div>
+                  <h4
+                    class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item2:text-primary-1 lg:text-2xl"
+                    >各組別開賽</h4
                   >
-                  <p><span class="mr-2 text-green-1">11/07</span>前端組開賽</p>
+                  <div class="my-4 text-center text-neutral-1">
+                    <p class="mb-1"
+                      ><span class="mr-2 text-green-1">10/31</span
+                      >UI組、團體組開賽</p
+                    >
+                    <p
+                      ><span class="mr-2 text-green-1">11/07</span>前端組開賽</p
+                    >
+                  </div>
+                  <p
+                    class="grid grid-cols-2 grid-rows-2 text-center text-neutral-1"
+                  >
+                    <span class="col-span-full">前端工程師可採用</span>
+                    <span>UI 設計師的設計</span>
+                    <span class="justify-self-start">稿產出完整作品</span>
+                  </p>
                 </div>
-                <p
-                  class="grid grid-cols-2 grid-rows-2 text-center text-neutral-1"
-                >
-                  <span class="col-span-full">前端工程師可採用</span>
-                  <span>UI 設計師的設計</span>
-                  <span class="justify-self-start">稿產出完整作品</span>
-                </p>
               </div>
             </li>
             <!-- 箭頭指示 -->
             <li
-              id="arrow2"
-              class="flow self-center justify-self-center lg:col-start-3 lg:row-start-2"
+              class="event-item self-center justify-self-center lg:col-start-3 lg:row-start-2"
             >
-              <img src="./assets/description/down.png" alt="指示流程方向" />
+              <div id="arrow2" class="flow">
+                <img src="./assets/description/down.png" alt="指示流程方向" />
+              </div>
             </li>
             <!-- 登錄作品 -->
-            <li
-              id="event3"
-              class="flow transition-30 group/item3 flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:col-start-3 lg:row-start-3 lg:flex-row"
-            >
-              <img
-                src="./assets/description/folder.png"
-                height="100"
-                alt="登錄作品"
-              />
-              <div>
-                <h4
-                  class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item3:text-primary-1 lg:text-2xl"
-                  >登錄作品</h4
-                >
-                <div class="my-4 text-center text-neutral-1">
-                  <p
-                    ><span class="mr-2 text-green-1">10/31</span>(一) 中午
-                    12:00</p
+            <li class="event-item lg:col-start-3 lg:row-start-3">
+              <div
+                id="event3"
+                class="flow transition-30 group/item3 flex h-full flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
+              >
+                <img
+                  src="./assets/description/folder.png"
+                  height="100"
+                  alt="登錄作品"
+                />
+                <div>
+                  <h4
+                    class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item3:text-primary-1 lg:text-2xl"
+                    >登錄作品</h4
                   >
-                  <p class="my-1 text-center text-xs font-bold">|</p>
-                  <p
-                    ><span class="mr-2 text-green-1">11/28</span>(一) 中午
-                    12:00</p
-                  >
+                  <div class="my-4 text-center text-neutral-1">
+                    <p
+                      ><span class="mr-2 text-green-1">10/31</span>(一) 中午
+                      12:00</p
+                    >
+                    <p class="my-1 text-center text-xs font-bold">|</p>
+                    <p
+                      ><span class="mr-2 text-green-1">11/28</span>(一) 中午
+                      12:00</p
+                    >
+                  </div>
+                  <p class="text-center text-neutral-1">依賽程登錄作品</p>
                 </div>
-                <p class="text-center text-neutral-1">依賽程登錄作品</p>
               </div>
             </li>
             <!-- 箭頭指示 -->
             <li
-              id="arrow3"
-              class="flow self-center justify-self-center lg:col-start-2 lg:row-start-3 lg:rotate-90"
+              class="event-item self-center justify-self-center lg:col-start-2 lg:row-start-3"
             >
-              <img src="./assets/description/down.png" alt="指示流程方向" />
+              <div id="arrow3" class="flow lg:rotate-90">
+                <img src="./assets/description/down.png" alt="指示流程方向" />
+              </div>
             </li>
             <!-- 線上直播 -->
-            <li
-              id="event4"
-              class="flow transiton-30 group/item4 flex flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:flex-row"
-            >
-              <img
-                src="./assets/description/play.png"
-                height="100"
-                alt="線上直播"
-              />
-              <div>
-                <h4
-                  class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item4:text-primary-1 lg:text-2xl"
-                  >線上直播</h4
-                >
-                <div class="my-4 text-center text-neutral-1">
-                  <p
-                    ><span class="mr-2 text-green-1">11/03 - 11/24</span
-                    >每週四</p
+            <li class="event-item lg:col-start-1 lg:col-end-2 lg:row-start-3">
+              <div
+                id="event4"
+                class="flow transiton-30 group/item4 flex h-full flex-col items-center justify-center gap-4 rounded-4xl border-2 border-neutral-1 px-7 py-8 hover:border-primary-1 hover:bg-primary-4 hover:shadow-primary-1 lg:flex-row"
+              >
+                <img
+                  src="./assets/description/play.png"
+                  height="100"
+                  alt="線上直播"
+                />
+                <div>
+                  <h4
+                    class="transition-30 text-center text-xl font-bold text-neutral-1 group-hover/item4:text-primary-1 lg:text-2xl"
+                    >線上直播</h4
                   >
+                  <div class="my-4 text-center text-neutral-1">
+                    <p
+                      ><span class="mr-2 text-green-1">11/03 - 11/24</span
+                      >每週四</p
+                    >
+                  </div>
                 </div>
               </div>
             </li>

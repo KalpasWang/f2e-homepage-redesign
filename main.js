@@ -230,34 +230,54 @@ function handleStagesAnimationn() {
 }
 
 function handleEventDescription() {
-  const items = gsap.utils.toArray(".flow");
+  const items = gsap.utils.toArray(".event-item");
+  const mq = matchMedia("(min-width: 1024px)");
 
-  items.forEach((item, i) => {
-    gsap.from(item, {
-      duration: 1,
-      delay() {
-        const mq = matchMedia("(min-width: 1024px)");
-        let delay = 0;
-        if (mq && i !== 3) {
-          const index = i > 3 ? i - 1 : i;
-          delay = 0.7 * (index % 3);
-        }
-        console.log(item, delay);
-        return delay;
-      },
-      opacity: 0,
-      // scale: 0.9,
-      y: 200,
-      ease: "back.out",
-      // transformOrigin: "50% 50%",
-      scrollTrigger: {
-        trigger: item,
-        start: "top 100%",
-        end: "top 65%",
-        scrub: true,
-      },
-    });
+  ScrollTrigger.batch(items, {
+    interval: 0.1,
+    batchMax: 3,
+    start: "top 100%",
+    end: "top 65%",
+    onEnter(elements) {
+      gsap.from(elements, {
+        duration: 1,
+        stagger: 0.6,
+        opacity: 0,
+        scale: 0.9,
+        y: 200,
+        ease: "back.out",
+        transformOrigin: "50% 50%",
+        scrollTrigger: {
+          // scrub: true,
+        },
+      });
+    },
   });
+  // items.forEach((item, i) => {
+  //   gsap.from(item, {
+  //     duration: 1,
+  //     delay() {
+  //       let delay = 0;
+  //       if (mq && i !== 3) {
+  //         const index = i > 3 ? i - 1 : i;
+  //         delay = 0.7 * (index % 3);
+  //       }
+  //       console.log(item, delay);
+  //       return delay;
+  //     },
+  //     opacity: 0,
+  //     // scale: 0.9,
+  //     y: 200,
+  //     ease: "back.out",
+  //     // transformOrigin: "50% 50%",
+  //     scrollTrigger: {
+  //       trigger: item,
+  //       start: "top 100%",
+  //       end: "top 65%",
+  //       scrub: true,
+  //     },
+  //   });
+  // });
 }
 
 function handleHeaderMenu() {
