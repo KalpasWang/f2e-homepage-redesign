@@ -158,7 +158,7 @@ function initOpeningAnimation() {
     );
   }
 
-  [pieceCode, , pieceDashboard].forEach((el, i) => {
+  [pieceCode, pieceDashboard].forEach((el, i) => {
     gsap.to(el, {
       delay: i * 0.6,
       duration: 1,
@@ -180,14 +180,13 @@ function initOpeningAnimation() {
 
   tl2
     .to([bigTitle, subtitle, signupBtn], {
-      y: "10vh",
+      y: "30vh",
       duration: 3,
     })
     .to(
       [pieceCode, pieceDashboard, rightLine, leftLine, marquee],
       {
-        y: -100,
-        autoAlpha: 0,
+        y: "-50vh",
         duration: 3,
       },
       "<"
@@ -323,10 +322,39 @@ function handleStagesAnimationn() {
     scrollTrigger: {
       trigger: cards,
       start: "top 100%",
-      end: "top 20%",
+      end: "top 50%",
       scrub: true,
     },
   });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#stages-h2",
+      start: "top 70%",
+    },
+  });
+
+  tl.from("#stages-h2", {
+    duration: 1,
+    scaleX: 0,
+    transformOrigin: "50%, 50%",
+    ease: "power3.out",
+  })
+    .from("#stages-subtitle", {
+      autoAlpha: 0,
+      y: 50,
+      duration: 0.7,
+    })
+    .from(
+      "#stages-thunder",
+      {
+        scale: 0,
+        transformOrigin: "top",
+        duration: 0.3,
+        ease: "elastic.out",
+      },
+      "-=0.3"
+    );
 }
 
 function handleEventDescription() {
@@ -474,7 +502,7 @@ function setSponsors() {
     scrollTrigger: {
       trigger: "#sponsors-wrapper",
       start: "top 100%",
-      end: "center 60%",
+      end: "+=300",
       scrub: true,
     },
   });
