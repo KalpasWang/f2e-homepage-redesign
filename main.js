@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function init() {
   // 前處理
+  window.scrollTo(0, 0);
   setSmoothScroll();
   handleHeaderMenu();
   handleQnATabs();
@@ -63,7 +64,6 @@ function initOpeningAnimation() {
       ease: "power3.inOut",
     },
     onStart() {
-      window.scrollTo(0, 0);
       document.body.classList.add("h-screen", "overflow-hidden");
     },
     onComplete() {
@@ -173,18 +173,26 @@ function initOpeningAnimation() {
     scrollTrigger: {
       trigger: "#questions",
       start: "top bottom",
-      end: "top 40%",
+      end: "top 30%",
       scrub: true,
     },
   });
 
   tl2
     .to([bigTitle, subtitle, signupBtn], {
-      y: "30vh",
+      y: "20vh",
       duration: 3,
     })
     .to(
-      [pieceCode, pieceDashboard, rightLine, leftLine, marquee],
+      [pieceCode, pieceDashboard],
+      {
+        y: "-25vh",
+        duration: 3,
+      },
+      "<"
+    )
+    .to(
+      [rightLine, leftLine],
       {
         y: "-50vh",
         duration: 3,
@@ -245,10 +253,10 @@ function set2ndBanner() {
 
   tl.from("#opening", {
     backgroundColor: "#000000",
-    duration: 2,
+    duration: 8,
   })
     .from(["#stamp1", "#stamp2", "#hand1", "#hand2"], {
-      duration: 2,
+      duration: 4,
       delay: 1,
       top: "50%",
       left: "50%",
@@ -261,7 +269,7 @@ function set2ndBanner() {
     .from(
       ["#opening-title", "#opening-bg"],
       {
-        duration: 2,
+        duration: 4,
         delay: 1,
         scale: 0.1,
         stagger: 0.3,
@@ -280,15 +288,6 @@ function set2ndBanner() {
       duration: 2,
     })
     .from(
-      "#opening-marquee1",
-      {
-        autoAlpha: 0,
-        duration: 2,
-        xPercent: 20,
-      },
-      "<"
-    )
-    .from(
       "#opening-marquee2-wrapper",
       {
         autoAlpha: 0,
@@ -296,12 +295,15 @@ function set2ndBanner() {
       },
       "<"
     )
+    .from("#opening-marquee1", {
+      duration: 4,
+      xPercent: -20,
+    })
     .from(
       "#opening-marquee2",
       {
-        autoAlpha: 0,
-        duration: 2,
-        xPercent: -20,
+        duration: 4,
+        xPercent: 20,
       },
       "<"
     );
@@ -335,7 +337,7 @@ function handleStagesAnimationn() {
   });
 
   tl.from("#stages-h2", {
-    duration: 1,
+    duration: 0.5,
     scaleX: 0,
     transformOrigin: "50%, 50%",
     ease: "power3.out",
@@ -343,7 +345,7 @@ function handleStagesAnimationn() {
     .from("#stages-subtitle", {
       autoAlpha: 0,
       y: 50,
-      duration: 0.7,
+      duration: 0.5,
     })
     .from(
       "#stages-thunder",
@@ -358,21 +360,38 @@ function handleStagesAnimationn() {
 }
 
 function handleEventDescription() {
+  gsap.from("#event-description h2", {
+    scaleY: 0,
+    transformOrigin: "50% 50%",
+    duration: 0.6,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#event-description h2",
+      start: "top 70%",
+    },
+  });
+
   const items = gsap.utils.toArray(".event-item");
 
+  gsap.set(items, {
+    autoAlpha: 0,
+    y: 200,
+    scale: 0.9,
+    transformOrigin: "50% 50%",
+  });
+
   ScrollTrigger.batch(items, {
-    interval: 0.5,
+    interval: 0.1,
     batchMax: 3,
-    start: "top 100%",
-    end: "top 65%",
+    start: "top 90%",
     onEnter(elements) {
-      gsap.from(elements, {
-        duration: 1,
-        stagger: 0.6,
-        opacity: 0,
-        scale: 0.9,
-        y: 200,
-        ease: "back.out",
+      gsap.to(elements, {
+        duration: 0.5,
+        stagger: 0.2,
+        autoAlpha: 1,
+        scale: 1,
+        y: 0,
+        ease: "power2.out",
         transformOrigin: "50% 50%",
       });
     },
